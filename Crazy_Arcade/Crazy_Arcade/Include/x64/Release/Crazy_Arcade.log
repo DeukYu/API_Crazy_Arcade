@@ -1,5 +1,12 @@
 ﻿  Core.cpp
+  Timer.cpp
+  main.cpp
+  Scene.cpp
+  SceneManager.cpp
+  InGameScene.cpp
   코드를 생성하고 있습니다.
-  All 12 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  31 of 34 functions (91.2%) were compiled, the rest were copied from previous compilation.
+    25 functions were new in current compilation
+    0 functions had inline decision re-evaluated but remain unchanged
   코드를 생성했습니다.
   Crazy_Arcade.vcxproj -> D:\GitHub\API_Crazy_Arcade\Crazy_Arcade\Crazy_Arcade\Include\../Bin/Crazy_Arcade64.exe

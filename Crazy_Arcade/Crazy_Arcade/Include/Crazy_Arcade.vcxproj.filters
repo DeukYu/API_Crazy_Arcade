@@ -16,6 +16,12 @@
     <Filter Include="01. Core">
       <UniqueIdentifier>{c8529074-65ee-4645-afd9-5915b3ae5a7b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="02. Scene">
+      <UniqueIdentifier>{35b37f43-010b-4759-9bd0-94e34e55e960}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01. Core\01. Timer">
+      <UniqueIdentifier>{aed77148-d78f-4eb5-80f4-00a884e93442}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -23,6 +29,18 @@
     </ClCompile>
     <ClCompile Include="Core.cpp">
       <Filter>01. Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\Timer.cpp">
+      <Filter>01. Core\01. Timer</Filter>
+    </ClCompile>
+    <ClCompile Include="Scene\InGameScene.cpp">
+      <Filter>02. Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="Scene\SceneManager.cpp">
+      <Filter>02. Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="Scene\Scene.cpp">
+      <Filter>02. Scene</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -40,6 +58,21 @@
     </ClInclude>
     <ClInclude Include="resource.h">
       <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Flag.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\Timer.h">
+      <Filter>01. Core\01. Timer</Filter>
+    </ClInclude>
+    <ClInclude Include="Scene\SceneManager.h">
+      <Filter>02. Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="Scene\Scene.h">
+      <Filter>02. Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="Scene\InGameScene.h">
+      <Filter>02. Scene</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

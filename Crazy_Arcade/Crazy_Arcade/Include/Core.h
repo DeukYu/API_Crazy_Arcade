@@ -5,10 +5,10 @@
 class CCore
 {
 private:
-	static CCore*	m_pInst;
+	static CCore*	m_pInst; // static 멤버 변수는 전역 변수처럼 취급,
 
 public:
-	static CCore*	GetInst()
+	static CCore* GetInst()
 	{
 		if (!m_pInst)
 			m_pInst = new CCore;
@@ -19,12 +19,13 @@ public:
 	{
 		SAFE_DELETE(m_pInst);
 	}
-public:
+
+private:
 	CCore();
 	~CCore();
 
 private:
-	static	bool	m_bLoop;
+	static bool		m_bLoop;
 
 private:
 	HINSTANCE		m_hInst;
@@ -36,8 +37,7 @@ public:
 	int Run();
 
 private:
-	void Logic();
-
+	void	Logic();
 private:
 	ATOM	MyRegisterClass();
 	BOOL	Create();
