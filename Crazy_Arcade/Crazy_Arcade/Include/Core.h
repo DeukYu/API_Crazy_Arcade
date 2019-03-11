@@ -30,14 +30,35 @@ private:
 private:
 	HINSTANCE		m_hInst;
 	HWND				m_hWnd;
+	HDC					m_hDC;
 	RESOULTION	m_tRS;
 
+public:
+	RESOULTION	GetResolution()		const
+	{
+		return m_tRS;
+	}
+
+	HWND	GetWindowHandle()	const
+	{
+		return m_hWnd;
+	}
+
+	void DestroyGame()
+	{
+		DestroyWindow(m_hWnd);
+	}
 public:
 	bool Init(HINSTANCE	hInst);
 	int Run();
 
 private:
 	void	Logic();
+	void Input(float fDeltaTime);
+	int	Update(float	fDeltaTime);
+	int	LateUpdate(float	fDeltaTime); // ÈÄÃ³¸®
+	void	Collision(float	fDeltaTime);
+	void	Render(float fDeltaTime);
 private:
 	ATOM	MyRegisterClass();
 	BOOL	Create();

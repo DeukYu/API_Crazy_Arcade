@@ -3,6 +3,7 @@
 
 #define		SAFE_DELETE(p)		if(p)	{	delete p;	p	=	NULL;	}
 #define		SAFE_DELETE_ARRAY(p)		if(p)	{	delete[] p;		p	=	NULL;	}
+#define		SAFE_RELEASE(p)	if(p)	{p->Release();	p = NULL;	}
 
 #define		DECLARE_SINGLE(Type)		\
 		private:\
@@ -25,3 +26,11 @@
 #define		DEFINITION_SINGLE(Type)	Type*	Type::m_pInst	=	NULL;
 #define		GET_SINGLE(Type)		Type::GetInst() 
 #define		DESTROY_SINGLE(Type)		Type::DestroyInst()
+
+#define		GETRESOLUTION		CCore::GetInst()->GetResolution()
+#define		WINDOWHANDLE		CCore::GetInst()->GetWindowHandle()
+
+#define		KEYDOWN(key)			CInput::GetInst()->KeyDown(key)
+#define		KEYPRESS(key)		CInput::GetInst()->KeyPress(key)
+#define		KEYUP(key)				CInput::GetInst()->KeyUp(key)
+#define		KEYKEY(key)				KEYDOWN(key)		||	KEYPRESS(key)

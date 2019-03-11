@@ -1,12 +1,20 @@
 #include "Core.h"
 #include "Scene/SceneManager.h"
 #include "Core/Timer.h"
+#include "Core\PathManager.h"
 
 CCore*	CCore::m_pInst = NULL;
 bool		CCore::m_bLoop = true;
 
 CCore::CCore()
 {
+	_CrtSetDbgFlag(_CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF);
+	//_CrtSetBreakAlloc(230);
+
+#ifdef _DEBUG
+	// 콘솔창을 생성시켜주는 함수이다.
+	AllocConsole();
+#endif // _DEBUG
 }
 
 
@@ -70,6 +78,10 @@ void CCore::Logic()
 	GET_SINGLE(CTimer)->Update();
 
 	float		fDeltaTime = GET_SINGLE(CTimer)->GetDeltaTime();
+}
+
+void CCore::Input(float fDeltaTime)
+{
 }
 
 ATOM CCore::MyRegisterClass()
